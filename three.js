@@ -1,8 +1,34 @@
 // import * as THREE from 'three';
-const THREE = require('three');
+// const THREE = require('three');
+import * as THREE from '../node_modules/three/build/three.module.js';
+import { GLTFLoader } from '../node_modules/three/examples/jsm/loaders/GLTFLoader.js'
 
 // init
+const loader = new GLTFLoader();
 
+
+
+// loader.load( '/src/testobj/testobj_squre001.glb', function ( gltf ) {
+
+// 	scene.add( gltf.scene );
+
+// }, undefined, function ( error ) {
+
+// 	console.error( error );
+
+// } );
+
+// loader.load('/src/testobj/testobj_squre001.glb', ( gltf ) => {
+//         // called when the resource is loaded
+//         scene.add( gltf.scene );
+//     }, ( xhr ) => {
+//         // called while loading is progressing
+//         console.log( `${( xhr.loaded / xhr.total * 100 )}% loaded` );
+//     }, ( error ) => {
+//         // called when loading has errors
+//         console.error( 'An error happened', error );
+//     },
+// );
 const camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
 camera.position.z = 1;
 
