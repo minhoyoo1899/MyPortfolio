@@ -1,8 +1,9 @@
 {
-  "name": "portfilio",
+  "name": "myportfolio",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,7 +18,8 @@
   },
   "homepage": "https://github.com/minhoyoo1899/portfilio#readme",
   "dependencies": {
-    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
     "three": "^0.146.0"
   }
 }
