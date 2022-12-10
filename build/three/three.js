@@ -1,7 +1,7 @@
 // import * as THREE from 'three';
 // const THREE = require('three');
 import * as THREE from "three";
-import { GLTFLoader } from "GLTFLoader";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 // import * as THREE from '../../node_modules/three/build/three.module.js';
 // import GLTFLoader from '../../node_modules/three-gltf-loader/index.js';
 // import GLTFLoader from "../../node_modules/three/examples/jsm/loaders/GLTFLoader.js";
@@ -52,9 +52,18 @@ renderer.setSize( window.innerWidth, window.innerHeight );
 renderer.setAnimationLoop( animation );
 document.body.appendChild( renderer.domElement );
 
+
+const GLTFLoader = new GLTFLoader();
+
+GLTFLoader.load("../../src/testobj/testobj_squre001.glb", (gltf) => { 
+	scene.add(gltf.scene);
+	console.log(gltf.scene);
+});
+
 // animation
 
-function animation( time ) {
+function animation(time) {
+	requestAnimationFrame(animate);
 
 	mesh.rotation.x = time / 2000;
 	mesh.rotation.y = time / 1000;
