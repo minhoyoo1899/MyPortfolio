@@ -53,9 +53,10 @@ renderer.setAnimationLoop( animation );
 document.body.appendChild( renderer.domElement );
 
 
-const GLTFLoader = new GLTFLoader();
+const GLTFloader = new GLTFLoader();
 
-GLTFLoader.load("../../src/testobj/testobj_squre001.glb", (gltf) => { 
+GLTFloader.load("../../src/testobj/testobj_squre001.glb", (gltf) => { 
+	console.log(gltf);
 	scene.add(gltf.scene);
 	console.log(gltf.scene);
 });
