@@ -1,14 +1,14 @@
 // import * as THREE from 'three';
 // const THREE = require('three');
 import * as THREE from "three";
-import GLTFLoader from "GLTFLoader";
+import { GLTFLoader } from "GLTFLoader";
 // import * as THREE from '../../node_modules/three/build/three.module.js';
 // import GLTFLoader from '../../node_modules/three-gltf-loader/index.js';
 // import GLTFLoader from "../../node_modules/three/examples/jsm/loaders/GLTFLoader.js";
 
 // import { GLTFLoader }  from "three/examples/jsm/loaders/GLTFLoader.js";
 console.log(THREE);
-// console.log(GLTFLoader);
+console.log(GLTFLoader);
 
 // init
 // const loader = new GLTFLoader();
