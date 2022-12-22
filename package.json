@@ -16,8 +16,7 @@
   "bugs": {
     "url": "https://github.com/minhoyoo1899/portfilio/issues"
   },
-  "homepage": "https://github.com/minhoyoo1899/portfilio#readme",
-  "type": "module",
+  "homepage": "https://github.com/minhoyoo1899/portfilio#readme",  
   "dependencies": {
     "fs": "^0.0.1-security",
     "http": "^0.0.1-security",
