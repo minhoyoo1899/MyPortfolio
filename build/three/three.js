@@ -8,9 +8,22 @@ function init() {
 	renderer.setClearColor(0xEEEEEE); // setClearColorHex 함수 없음
 	renderer.setSize(window.innerWidth, window.innerHeight);
 
-	const axes = new THREE.AxesHelper(20); // axisHelper함수 없음 아마도 업데이트 된 듯?	
+	const axes = new THREE.AxesHelper(20); // axisHelper함수 없음 아마도 업데이트 된 듯?
+	
 	scene.add(axes);
 
+	const planeGeometry = new THREE.PlaneGeometry(60, 20, 1, 1);
+	const planeMaterial = new THREE.MeshBasicMaterial({ color: 0xcccccc });
+	const plane = new THREE.Mesh(planeGeometry, planeMaterial);
+
+	plane.rotation.x = -0.5 * Math.PI;
+	plane.position.x = 15
+	plane.position.y = 0
+	plane.position.z = 0
+	scene.add(plane);
+
+	const cubeGeometry = new THREE.BoxGeometry(4, 4, 4);
+	const cubeMeterial = new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true });
 	const cube = new THREE.Mesh(cubeGeometry, cubeMeterial);
 
 	cube.position.x = -4;
