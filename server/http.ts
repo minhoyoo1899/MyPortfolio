@@ -1,7 +1,7 @@
 import * as http from "http";
 import * as fs from "fs";
 
-const index = fs.readFileSync('../Web_Content/index.html', 'utf-8');
+const index = fs.readFileSync('../public/index.html', 'utf-8');
 // const threeJS = fs.readFileSync('../build/three/three.js', 'utf-8');
 const DNS = http.createServer((req: any, res: any) => {
   let url = req.url;
@@ -9,7 +9,7 @@ const DNS = http.createServer((req: any, res: any) => {
     case "GET":
       if (url === "/") {
         res.writeHead(200, { 'Content-Type': 'text:html; charset=UTF-8;' });
-        res.write(index);
+        res.write("test");
         res.end();
       // } else if (url === "/three.js") {
       //   res.writeHead(200, { 'Content-Type': 'text:javascript; charset=UTF-8;' });
