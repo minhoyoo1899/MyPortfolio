@@ -28,7 +28,7 @@ class httpServerClass {
     });
 
     app.get("../build/three/three.js", (req, res) => {
-      res.sendFile(path.join(__dirname, '../build/three/three.js'));
+      res.sendFile(threeJS);
     });
 
     app.get("/node_modules/three/build/three.module.js", (req, res) => {
